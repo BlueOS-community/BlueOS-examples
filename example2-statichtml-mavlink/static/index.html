@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title> Mavlink example
+    </title>
+</head>
+
+<body>
+    <h1> Hello MAVLink World</h1>
+    <h3> Your current attitude is: Roll:<span id="roll">--.-</span> Pitch:<span id="pitch">--.-</span> Yaw:<span id="yaw">--.-</span></h3>
+    <h3> Last updated: <span id="last">--.-</span> seconds ago</h3>
+</body>
+
+
+<script>
+    //const mavlink2rest_url = `http://${document.location.hostname}/mavlink2rest`
+    const mavlink2rest_url = `http://blueos.local/mavlink2rest`
+    const attitude_url = mavlink2rest_url + '/mavlink/vehicles/1/components/1/messages/ATTITUDE'
+
+    setInterval(async () => {
+        const response = await fetch(attitude_url);
+        const data = await response.json();
+        const payload = data["message"]
+        const last_updated = data["status"]["time"]["last_update"]
+        document.getElementById("roll").innerText = (payload["roll"] / Math.PI * 180).toFixed(1)
+        document.getElementById("pitch").innerText = (payload["pitch"] / Math.PI * 180).toFixed(1)
+        document.getElementById("yaw").innerText = (payload["yaw"] / Math.PI * 180).toFixed(1)
+        document.getElementById("last").innerText = ((Date.now() - Date.parse(last_updated)) / 1000).toFixed(1)
+    }, 1000)
+
+</script>
+
+</html>

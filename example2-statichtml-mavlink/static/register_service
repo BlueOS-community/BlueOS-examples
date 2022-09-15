@@ -1,0 +1,9 @@
+{
+    "name":"Example 3 - MAVLink attitude",
+    "description":"Example Extension 3",
+    "icon":"mdi-clock-fast",
+    "company":"Blue Robotics",
+    "version":"1.0.0",
+    "webpage":"http://github.com/Williangalvani/BlueOS-examples",
+    "api":""
+ }
