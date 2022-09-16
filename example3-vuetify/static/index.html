@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Vue + Vuetify Example Extension</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/css/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<style>
+    .v-card {
+        padding: 20px;
+    }
+    h1 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+</style>
+
+<div id="app">
+    <v-app>
+        <v-main>
+            <v-container>
+                <h1>Vue + Vuetify Example Extension</h1>
+                <!-- This card is from  https://vuetifyjs.com/en/components/cards/#outlined -->
+                <v-row>
+                    <v-card class="mx-auto" max-width="344" outlined>
+                        <v-list-item three-line>
+                            <v-list-item-content>
+                                <div class="text-overline mb-4">
+                                    OVERLINE
+                                </div>
+                                <v-list-item-title class="text-h5 mb-1">
+                                    Headline 5
+                                </v-list-item-title>
+                                <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
+                                </v-list-item-subtitle>
+                            </v-list-item-content>
+
+                            <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+                        </v-list-item>
+
+                        <v-card-actions>
+                            <v-btn outlined rounded text>
+                                Button
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
+                    <!-- This card uses JS data from Vue -->
+                    <v-card class="mx-auto" max-width="344">
+                        This string is defined in js: {{ an_internal_state }}
+                    </v-card>
+                </v-row>
+            </v-container>
+        </v-main>
+    </v-app>
+</div>
+
+<script src="/js/vue.js"></script>
+<script src="/js/vuetify.js"></script>
+<script src="/js/axios.min.js"></script>
+
+<script>
+    Vue.config.devtools = true;
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data() {
+            return {
+                an_internal_state: "Hi, I'm a string",
+            }
+        },
+    })
+
+</script>
+
+</html>
