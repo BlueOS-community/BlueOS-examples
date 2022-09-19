@@ -3,7 +3,6 @@ from pathlib import Path
 
 import appdirs
 import uvicorn
-from commonwealth.utils.logs import InterceptHandler, get_new_log_path
 from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI, HTTPException, status
 from fastapi.responses import HTMLResponse, FileResponse

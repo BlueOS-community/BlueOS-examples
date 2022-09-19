@@ -1,5 +1,6 @@
 from python:3.9-slim-bullseye
 
-COPY static /static
+COPY app /app
+RUN python /app/setup.py install
 
-ENTRYPOINT cd /static && python -m http.server 8347
+ENTRYPOINT cd /app && python main.py
