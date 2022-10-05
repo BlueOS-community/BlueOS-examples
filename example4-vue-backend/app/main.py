@@ -58,4 +58,4 @@ async def root() -> Any:
 
 if __name__ == "__main__":
     # Running uvicorn with log disabled so loguru can handle it
-    uvicorn.run(app, host="0.0.0.0", port=9100, log_config=None)
+    uvicorn.run(app, host="0.0.0.0", port=80, log_config=None)
