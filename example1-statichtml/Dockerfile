@@ -17,9 +17,21 @@ LABEL permissions '{\
     }\
   }\
 }'
-LABEL reasonings = '{\
-    "network_mode": "Default option"\
-}'
+LABEL authors = '[\
+    {\
+        "name": "Willian Galvani",\
+        "email": "willian@bluerobotics.com"\
+    }\
+],'
+LABEL docs = ''
+LABEL company = '{\
+        "about": "",\
+        "name": "Blue Robotics",\
+        "email": "support@bluerobotics.com"\
+    },'
+LABEL readme = 'https://raw.githubusercontent.com/Williangalvani/BlueOS-examples/{tag}/example1-statichtml/Readme.md'
+LABEL website = 'https://github.com/Williangalvani/BlueOS-examples/'
+LABEL support = 'https://github.com/Williangalvani/BlueOS-examples/'
 LABEL requirements="core >= 1"
 
 ENTRYPOINT cd /static && python -m http.server 80
