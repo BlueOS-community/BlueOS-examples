@@ -23,21 +23,21 @@ LABEL permissions '\
     }\
   }\
 }'
-LABEL authors = '[\
+LABEL authors '[\
     {\
         "name": "Willian Galvani",\
         "email": "willian@bluerobotics.com"\
     }\
-],'
-LABEL docs = ''
-LABEL company = '{\
+]'
+LABEL docs ''
+LABEL company '{\
         "about": "",\
         "name": "Blue Robotics",\
         "email": "support@bluerobotics.com"\
-    },'
-LABEL readme = 'https://raw.githubusercontent.com/Williangalvani/BlueOS-examples/{tag}/example4-vue-backend/Readme.md'
-LABEL website = 'https://github.com/Williangalvani/BlueOS-examples/'
-LABEL support = 'https://github.com/Williangalvani/BlueOS-examples/'
+    }'
+LABEL readme 'https://raw.githubusercontent.com/Williangalvani/BlueOS-examples/{tag}/example4-vue-backend/Readme.md'
+LABEL website 'https://github.com/Williangalvani/BlueOS-examples/'
+LABEL support 'https://github.com/Williangalvani/BlueOS-examples/'
 LABEL requirements="core >= 1"
 
 ENTRYPOINT cd /app && python main.py
