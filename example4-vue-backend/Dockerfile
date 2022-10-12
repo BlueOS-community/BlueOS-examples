@@ -5,7 +5,7 @@ RUN python /app/setup.py install
 
 EXPOSE 80/tcp
 
-LABEL version="1.0"
+LABEL version="1.0.0"
 # TODO: Add a Volume for persistence across boots
 LABEL permissions '\
 {\

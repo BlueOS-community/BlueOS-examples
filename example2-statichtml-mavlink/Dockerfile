@@ -2,7 +2,7 @@ from python:3.9-slim-bullseye
 
 COPY static /static
 
-LABEL version="1.0"
+LABEL version="1.0.0"
 LABEL permissions '{\
   "ExposedPorts": {\
     "80/tcp": {}\
