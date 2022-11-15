@@ -15,11 +15,3 @@ Then build it:
 
 `docker buildx build --platform linux/amd64,linux/arm/v7 . -t YOURDOCKERHUBUSER/YOURDOCKERHUBREPO:latest --output type=registry
 `
-
-Then pull it in blueos:
-
-
-```
-red-pill
-sudo docker run -d --net=host --name=blueos-example4 --restart=unless-stopped YOURDOCKERHUBUSER/YOURDOCKERHUBREPO:latest
-```
