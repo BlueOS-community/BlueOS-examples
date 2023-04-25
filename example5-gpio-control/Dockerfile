@@ -9,9 +9,9 @@ RUN python /app/setup.py install
 
 EXPOSE 80/tcp
 
-LABEL version="1.0.0"
+LABEL version="1.0.1"
 # TODO: Add a Volume for persistence across boots
-LABEL permissions '\
+LABEL permissions='\
 {\
   "ExposedPorts": {\
     "80/tcp": {}\
@@ -28,21 +28,26 @@ LABEL permissions '\
     }\
   }\
 }'
-LABEL authors '[\
+LABEL authors='[\
     {\
         "name": "Willian Galvani",\
         "email": "willian@bluerobotics.com"\
     }\
 ]'
-LABEL docs ''
-LABEL company '{\
+LABEL company='{\
         "about": "",\
         "name": "Blue Robotics",\
         "email": "support@bluerobotics.com"\
     }'
-LABEL readme 'https://raw.githubusercontent.com/Williangalvani/BlueOS-examples/{tag}/example5-gpio-control/Readme.md'
-LABEL website 'https://github.com/Williangalvani/BlueOS-examples/'
-LABEL support 'https://github.com/Williangalvani/BlueOS-examples/'
-LABEL requirements="core >= 1"
+LABEL type="example"
+LABEL tags='[\
+        "interaction"\
+    ]'\
+LABEL readme='https://raw.githubusercontent.com/Williangalvani/BlueOS-examples/{tag}/example5-gpio-control/Readme.md'
+LABEL links='{\
+        "website": "https://github.com/Williangalvani/BlueOS-examples/",\
+        "support": "https://github.com/Williangalvani/BlueOS-examples/"\
+    }'
+LABEL requirements="core >= 1.1"
 
 ENTRYPOINT pigpiod && cd /app && GPIOZERO_PIN_FACTORY=pigpio python main.py
