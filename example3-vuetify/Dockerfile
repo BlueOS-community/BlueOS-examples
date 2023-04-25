@@ -2,8 +2,8 @@ from python:3.9-slim-bullseye
 
 COPY static /static
 
-LABEL version="1.0.0"
-LABEL permissions '{\
+LABEL version="1.0.1"
+LABEL permissions='{\
   "ExposedPorts": {\
     "80/tcp": {}\
   },\
@@ -23,14 +23,16 @@ LABEL authors='[\
         "email": "willian@bluerobotics.com"\
     }\
 ]'
-LABEL docs=''
 LABEL company='{\
-  "about": "",\
-  "name": "Blue Robotics",\
-  "email": "support@bluerobotics.com"\
-}'
-LABEL readme 'https://raw.githubusercontent.com/Williangalvani/BlueOS-examples/{tag}/example3-vuetify/Readme.md'
-LABEL website 'https://github.com/Williangalvani/BlueOS-examples/'
-LABEL support 'https://github.com/Williangalvani/BlueOS-examples/'
-LABEL requirements="core >= 1"
+        "about": "",\
+        "name": "Blue Robotics",\
+        "email": "support@bluerobotics.com"\
+    }'
+LABEL type="example"
+LABEL readme='https://raw.githubusercontent.com/Williangalvani/BlueOS-examples/{tag}/example3-vuetify/Readme.md'
+LABEL links='{\
+        "website": "https://github.com/Williangalvani/BlueOS-examples/",\
+        "support": "https://github.com/Williangalvani/BlueOS-examples/"\
+    }'
+LABEL requirements="core >= 1.1"
 ENTRYPOINT cd /static && python -m http.server 80
