@@ -42,7 +42,7 @@ LABEL company='{\
 LABEL type="example"
 LABEL tags='[\
         "interaction"\
-    ]'\
+    ]'
 LABEL readme='https://raw.githubusercontent.com/Williangalvani/BlueOS-examples/{tag}/example5-gpio-control/Readme.md'
 LABEL links='{\
         "website": "https://github.com/Williangalvani/BlueOS-examples/",\
