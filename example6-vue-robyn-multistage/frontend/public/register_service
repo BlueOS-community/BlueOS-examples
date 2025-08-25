@@ -1,0 +1,9 @@
+{
+    "name":"Example 6: Vue3 + Robyn",
+    "description":"Example Extension",
+    "icon":"mdi-heart-cog",
+    "company":"Blue Robotics",
+    "version":"1.0.0",
+    "webpage":"https://example.com",
+    "api":""
+ }
