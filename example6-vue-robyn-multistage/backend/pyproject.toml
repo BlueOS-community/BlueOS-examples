@@ -1,0 +1,10 @@
+[project]
+name = "example6-vue-robyn-multistage"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "robyn>=0.72.0",
+    "uvloop",
+]
